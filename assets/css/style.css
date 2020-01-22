@@ -35,7 +35,8 @@ hr {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -282,9 +283,10 @@ hr {
 /*About*/
 
 .card {
-    margin-top: 80px;
+    margin: 80px -15px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card_inner {
@@ -293,7 +295,8 @@ hr {
 }
 
 .card_item {
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
 }
 
 .card_item:hover .card_img {
@@ -315,6 +318,8 @@ hr {
 
 .card_img img {
     display: block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .1s linear;
 }
 
@@ -363,6 +368,7 @@ hr {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat_info {
@@ -394,13 +400,18 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services_item {
-    flex: 1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.333333%;
+    padding: 0 35px 40px 80px;
     position: relative;
+    margin-bottom: 40px;
+}
+
+.services_item--bottom {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services_icon {
@@ -434,6 +445,8 @@ hr {
 
 .devices_item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices_item--iphone {
@@ -448,10 +461,19 @@ hr {
 
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo_item {
     width: 50%;
+    padding: 0 15px;
+}
+
+.wedo_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .accordion_item {
@@ -1061,4 +1083,144 @@ hr {
 
 .copyright span {
     color: #f38181;
+}
+
+@media (max-width: 1230px) {
+    /*Intro*/
+    .intro_upptitle {
+        font-size: 52px;
+    }
+    .intro_title {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 990px) {
+    /*Intro*/
+    .intro_upptitle {
+        font-size: 32px;
+    }
+    .intro_title {
+        font-size: 75px;
+    }
+    /*Stat*/
+    .stat {
+        justify-content: center;
+    }
+    .stat_info {
+        flex: none;
+        width: 33.3333%;
+        border: none;
+        padding: 30px;
+    }
+    .stat_info:last-child {
+        border: none;
+    }
+    /*Services*/
+    .services_item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+    .services_item--bottom {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    /*Navigation*/
+    .nav {
+        display: none;
+    }
+    /*Slider*/
+    .slider_text {
+        display: none;
+    }
+    .slider_item.active:before {
+        width: 50%;
+    }
+    /*Section*/
+    .section {
+        padding: 40px 0;
+    }
+    .section--devices {
+        padding-bottom: 0;
+    }
+    /*Cards*/
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .card_item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+    .card_item:last-child {
+        margin-bottom: 0px;
+    }
+    /*Services*/
+    .services {
+        justify-content: center;
+    }
+    .services_item {
+        width: 100%;
+        padding-left: 55px;
+    }
+    .services_icon {
+        left: 0;
+    }
+    /*Devices*/
+    .devices {
+        max-width: 480px;
+    }
+    .devices_item--iphone {
+        width: 200px;
+    }
+    /*Wedo*/
+    .wedo_img {
+        display: none;
+    }
+    .wedo_item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /*Intro*/
+    .intro_upptitle {
+        font-size: 22px;
+    }
+    .intro_title {
+        font-size: 45px;
+    }
+    /*Section*/
+    .section_header {
+        margin-bottom: 50px;
+    }
+    .section_upptitle {
+        font-size: 20px;
+    }
+    .section_title {
+        font-size: 24px;
+    }
+    .section_title:after {
+        margin: 20px auto;
+    }
+    /*Stat*/
+    .stat_info {
+        width: 100%;
+        border-bottom: 1px solid #b5eae0;
+    }
+    .stat_numbers {
+        font-size: 52px;
+    }
+    /*Devices*/
+    .devices {
+        max-width: 300px;
+    }
+    .devices_item--iphone {
+        width: 140px;
+        bottom: -40px;
+        right: -30px;
+    }
 }
