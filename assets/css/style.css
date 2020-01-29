@@ -30,6 +30,10 @@ hr {
     background-color: #e5e5e5;
 }
 
+.page {
+    overflow: hidden;
+}
+
 
 /*Container*/
 
@@ -553,6 +557,9 @@ hr {
 }
 
 .reviews_photo {
+    display: block;
+    height: 210px;
+    width: 210px;
     position: absolute;
     top: 0;
     left: 0;
@@ -643,6 +650,17 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+}
+
+.logos_item {
+    padding: 0 15px;
+}
+
+.logos_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -888,6 +906,10 @@ hr {
     background-color: #f8f8f8;
 }
 
+.footer_col {
+    padding: 0 15px;
+}
+
 .footer_col--first {
     width: 40%;
 }
@@ -902,7 +924,9 @@ hr {
 
 .footer_inner {
     padding-bottom: 65px;
+    margin: 0 -15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -1059,14 +1083,15 @@ hr {
 }
 
 .instagram_item {
-    width: 30%;
-    flex: 1 1 0;
+    width: 33.3333333%;
     border: 1px solid #f8f8f8;
     border-bottom: 0;
 }
 
 .instagram_item img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -1123,6 +1148,49 @@ hr {
     }
     .services_item--bottom {
         border-bottom: 0;
+    }
+    /*Reviews*/
+    .reviews {
+        padding: 0 60px;
+    }
+    .reviews_text {
+        font-size: 20px;
+    }
+    .reviews_photo {
+        height: 160px;
+        width: 160px;
+    }
+    .reviews_item {
+        padding-left: 180px;
+    }
+    /*Clients*/
+    .clients {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .clients_item {
+        width: 100%;
+        padding-right: 0;
+    }
+    .clients_item:last-child {
+        margin-bottom: 0;
+    }
+    /*Footer*/
+    .footer_col--first {
+        width: 100%;
+    }
+    .footer_col--second {
+        width: 50%;
+    }
+    .footer_col--third {
+        width: 50%;
+    }
+    /*Instagram*/
+    .instagram {
+        justify-content: flex-start;
+    }
+    .instagram_item {
+        width: auto;
     }
 }
 
@@ -1183,6 +1251,60 @@ hr {
     .wedo_item {
         width: 100%;
     }
+    /*Reviews*/
+    .reviews_photo {
+        position: static;
+        margin: 0 auto 20px;
+    }
+    .reviews_item {
+        padding-left: 0;
+    }
+    .reviews_text {
+        font-size: 16px;
+    }
+    .reviews_author {
+        font-size: 20px;
+    }
+    /*Logos*/
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logos_item {
+        width: 33.33333%;
+        margin-bottom: 15px;
+    }
+    .logos_img {
+        margin: 0 auto;
+    }
+    /*Works*/
+    .works {
+        flex-wrap: wrap;
+    }
+    .works_col {
+        flex: none;
+        width: 50%;
+    }
+    /*blog*/
+    .blog {
+        flex-wrap: wrap;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .blog_item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog_item:last-child {
+        margin-bottom: 0;
+    }
+    /*Footer*/
+    .footer_col--second {
+        width: 100%;
+    }
+    .footer_col--third {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1222,5 +1344,48 @@ hr {
         width: 140px;
         bottom: -40px;
         right: -30px;
+    }
+    /*Reviews*/
+    .reviews {
+        padding: 0;
+    }
+    .reviews_btn {
+        top: 18%;
+    }
+    /*Logos*/
+    .logos_item {
+        width: 50%;
+    }
+    /*Works*/
+    .works_col {
+        width: 100%;
+    }
+    /*Cleints*/
+    .clients_photo {
+        position: static;
+    }
+    .clients_item {
+        padding-left: 0;
+        text-align: center;
+    }
+    .clients_text:before {
+        margin: 15px auto;
+    }
+    /*Blogs*/
+    .blogs_img {
+        width: 80px;
+        height: 50px;
+    }
+    .blogs_title {
+        font-size: 10px;
+    }
+    /*Subscribe*/
+    .subscribe {
+        flex-wrap: wrap;
+        max-width: none;
+    }
+    .subscribe_input,
+    .subscribe_btn {
+        width: 100%;
     }
 }
