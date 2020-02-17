@@ -165,8 +165,13 @@ hr {
     color: #fce38a;
 }
 
-.nav_link:hover:after {
+.nav_link:hover:after,
+.nav_link.active:after {
     opacity: 1;
+}
+
+.nav_link.active {
+    color: #fce38a;
 }
 
 .nav-toggle {
@@ -182,6 +187,10 @@ hr {
     cursor: pointer;
     color: transparent;
     font-size: 0;
+}
+
+.nav-toggle:focus {
+    outline: 0;
 }
 
 .nav-toggle.active .nav-toggle_item {
@@ -321,6 +330,7 @@ hr {
 
 .section--clients {
     background: url("../images/images/clients-bg.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .section--map {
@@ -630,7 +640,12 @@ hr {
     position: relative;
 }
 
+.reviews .slick-slider {
+    padding: 0 110px;
+}
+
 .reviews_item {
+    min-height: 210px;
     padding-left: 255px;
     position: relative;
 }
@@ -667,16 +682,24 @@ hr {
     margin-right: 10px;
 }
 
-.reviews_btn {
+.slick-arrow {
+    display: block;
     font-size: 0;
+    border: 0;
+    background: none;
     color: transparent;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    cursor: pointer;
 }
 
-.reviews_btn:after {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-arrow:after {
     content: "";
     display: block;
     width: 20px;
@@ -685,12 +708,12 @@ hr {
     border-right: 4px solid #ccc;
 }
 
-.reviews_btn--prev {
+.slick-prev {
     left: 0;
     transform: rotate(-135deg);
 }
 
-.reviews_btn--next {
+.slick-next {
     right: 0;
     transform: rotate(45deg);
 }
@@ -1229,7 +1252,7 @@ hr {
         border-bottom: 0;
     }
     /*Reviews*/
-    .reviews {
+    .reviews .slick-slider {
         padding: 0 60px;
     }
     .reviews_text {
@@ -1291,7 +1314,10 @@ hr {
         background-color: #f38181;
         width: 100%;
     }
-    .nav_link {
+    .nav.active {
+        display: block;
+    }
+    nav .nav_link {
         display: block;
         margin: 0;
         padding: 8px 20px;
@@ -1352,6 +1378,12 @@ hr {
         width: 100%;
     }
     /*Reviews*/
+    .reviews {
+        padding: 0 30px;
+    }
+    .slick-arrow {
+        top: 18%;
+    }
     .reviews_photo {
         position: static;
         margin: 0 auto 20px;
@@ -1446,11 +1478,8 @@ hr {
         right: -30px;
     }
     /*Reviews*/
-    .reviews {
+    .reviews .slick-slider {
         padding: 0;
-    }
-    .reviews_btn {
-        top: 18%;
     }
     /*Logos*/
     .logos_item {
